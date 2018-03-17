@@ -1,0 +1,21 @@
+<div class="item-container" [ngClass]="{ 'selected' : isItemSelected}">
+            <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="{{item?.id}}" (change)="selectItem($event);">
+                        <label class="custom-control-label" for="{{item?.id}}"></label>
+            </div>
+            <div class="name item-details-font text-truncate">
+                        {{item?.name}}
+            </div>
+            <div class="service-name item-details-font text-truncate">
+                        {{item?.serviceName}}
+            </div>
+            <div class="email item-details-font text-truncate">
+                        {{item?.email}}
+            </div>
+            <div class="phone item-details-font text-truncate">
+                        {{item?.phone}}
+            </div>
+            <div class="lead-status item-details-font text-truncate">
+                        {{item?.leadStatus}}
+            </div>
+</div>

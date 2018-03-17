@@ -1,0 +1,55 @@
+<div class="height-100 row">
+            <section class="col-md-3 col-lg-2 links-container">
+
+            </section>
+
+            <section class="col-md-9 col-lg-10 pl-0">
+                        <section class="header-links-container">
+
+                        </section>
+                        <section class="filters-container">
+
+                        </section>
+                        <section class="results-table-container p-4">
+                                    <div class="search-container">
+
+                                    </div>
+                                    <div class="table-header-container">
+                                                <div class="name table-header-font" (click)="sortItems($event)">
+                                                            NAME
+                                                            <i class="fas fa-arrow-up" [ngClass]="{'rotate' : rotateIcon}" ></i>
+                                                </div>
+                                                <div class="service-name table-header-font">
+                                                            SERVICE NAME
+                                                </div>
+                                                <div class="email table-header-font">
+                                                            EMAIL
+                                                </div>
+                                                <div class="phone table-header-font">
+                                                            PHONE
+                                                </div>
+                                                <div class="lead-status table-header-font">
+                                                            LEAD STATUS
+                                                </div>
+                                    </div>
+                                    <section class="items-container">
+                                                <div class="loading-overlay" *ngIf="isloading"></div>
+                                                <app-item *ngFor="let item of itemsArray;let i= index;trackBy: trackByFn;" [item]="item"></app-item>
+                                    </section>
+
+
+
+                                    <ul class="pagination float-right">
+                                                <li class="page-item">
+                                                            <a class="page-link" (click)="loadMoreData()" href="javascript:void(0);">1</a>
+                                                </li>
+                                                <li class="page-item">
+                                                            <a class="page-link" (click)="loadMoreData()" href="javascript:void(0);">2</a>
+                                                </li>
+                                                <li class="page-item">
+                                                            <a class="page-link" (click)="loadMoreData()" href="javascript:void(0);">3</a>
+                                                </li>
+                                    </ul>
+                        </section>
+            </section>
+</div>

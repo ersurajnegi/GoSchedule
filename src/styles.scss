@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.app-container {
+  font-size: 1em;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  z-index: 0;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.name {
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+.service-name {
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+.email {
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.phone {
+  -ms-flex: 0 0 15%;
+  flex: 0 0 15%;
+  max-width: 15%;
+}
+.lead-status {
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.loading-overlay,
+.app-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: #fff url("./assets/loading.gif") no-repeat 50% center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.app-overlay {
+  display: none;
+}
+
+.app-root {
+  &:empty {
+    & + {
+      .app-overlay {
+        display: block;
+      }
+    }
+  }
+}
