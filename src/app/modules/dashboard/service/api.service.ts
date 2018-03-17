@@ -9,7 +9,7 @@ export class ApiService {
 
   getDetails() {
     return this._http.get(
-      "http://www.json-generator.com/api/json/get/ceyUZEgdHC"
+      "https://www.json-generator.com/api/json/get/ceyUZEgdHC"
     );
   }
 }
